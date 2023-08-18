@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Validator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="sign-up">
+            <form autocomplete="on">
+                <label for="email">Email:</label>
+                <input type="email" id="email"  />
+                <label for="email">Create password:</label>
+                <input type="password" id="password" autocomplete="on"/>
+                <label for="Rpassword">Confirm Password:</label>
+                <input type="password" id="Rpassword" autocomplete="on"/>
+                <button disabled type="submit">Submit</button>
+            </form>
+            <div class="password-rules">
+                <h4>Password must contains the following:</h4>
+                <ul>
+                    <li>
+                        <p>One or more lowercase letter</p>
+                    </li>
+                    <li>
+                        <p>One or more upperrcase letter</p>
+                    </li>
+                    <li>
+                        <p>One or more number</p>
+                    </li>
+                    <li>
+                        <p>Atleast one special letter</p>
+                    </li>
+                    <li>
+                        <p>Atleast 8 characters long</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
