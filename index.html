@@ -17,10 +17,20 @@
                 <input type="email" id="email" />
 
                 <label for="password">Create password:</label>
-                <input type="password" id="password" class="password" autocomplete="new-password" />
-
+                <div class="passwordDiv">
+                    <input type="password" id="password" class="password" autocomplete="new-password" />
+                    <div class="passwordIcon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+                
                 <label for="Rpassword">Confirm Password:</label>
-                <input type="password" id="Rpassword" class="password" autocomplete="new-password" />
+                <div class="passwordDiv">
+                    <input type="password" id="Rpassword" class="password" autocomplete="new-password" />
+                    <div class="passwordIcon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
 
                 <button disabled type="submit">Submit</button>
             </form>
@@ -28,27 +38,27 @@
                 <h4>Password must contains the following:</h4>
                 <ul>
                     <li>
-                        <i class="fa-solid fa-check" id="lowerFulfilled"></i>
+                        <i class="fa-solid fa-check" id="lowerFulfilledIcon"></i>
                         <!-- <i class="fa-solid fa-xmark"></i> -->
                         <p id="lower">One or more lowercase letter</p>
                     </li>
                     <li>
-                        <i class="fa-solid fa-check" id="upperFulfilled"></i>
+                        <i class="fa-solid fa-check" id="upperFulfilledIcon"></i>
                         <!-- <i class="fa-solid fa-xmark"></i> -->
                         <p id="upper">One or more upperrcase letter</p>
                     </li>
                     <li>
-                        <i class="fa-solid fa-check" id="numFulfilled"></i>
+                        <i class="fa-solid fa-check" id="numFulfilledIcon"></i>
                         <!-- <i class="fa-solid fa-xmark"></i> -->
                         <p id="number">One or more number</p>
                     </li>
                     <li>
-                        <i class="fa-solid fa-check" id="specFulfilled"></i>
+                        <i class="fa-solid fa-check" id="specFulfilledIcon"></i>
                         <!-- <i class="fa-solid fa-xmark"></i> -->
                         <p id="special">Atleast one special letter</p>
                     </li>
                     <li>
-                        <i class="fa-solid fa-check" id="lenFulfilled"></i>
+                        <i class="fa-solid fa-check" id="lenFulfilledIcon"></i>
                         <!-- <i class="fa-solid fa-xmark"></i> -->
                         <p id="passLength">Atleast 8 characters long</p>
                     </li>

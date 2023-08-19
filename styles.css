@@ -9,12 +9,12 @@
 .container {
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(#81DFD9,#accfef);
+    background: linear-gradient(#81DFD9, #accfef);
     display: grid;
     place-items: center;
 }
 
-.sign-up{
+.sign-up {
     padding: 1.5rem;
     /* width: 28rem; */
     display: flex;
@@ -25,17 +25,24 @@
     border-radius: 10px;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: start;
 }
-label{
+
+label {
     font-size: 1.2rem;
     margin-bottom: 8px;
 }
-input{
+.passwordDiv{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+input {
     width: 85%;
     height: 2rem;
     font-size: 1.1rem;
@@ -46,10 +53,18 @@ input{
     border: 1px solid lightgray;
     border-radius: 5px;
 }
-input:focus{
-    border: 2px solid #accfef;
+
+input:focus {
+    outline: 2px solid #accfef;
 }
-form button{
+
+.fa-eye{
+    font-weight: 100;
+    cursor: pointer;
+}
+
+
+form button {
     padding: 8px 15px;
     width: 85%;
     font-size: 1.1rem;
@@ -59,21 +74,24 @@ form button{
     background-color: #81DFD9;
     color: white;
 }
-form button:hover{
+
+form button:hover {
     background-color: #51d6cd;
     cursor: pointer;
 }
 
-.password-rules li{
+.password-rules li {
     color: red;
 }
 
-li{
+li {
     display: flex;
     gap: 12px;
     align-items: center;
 }
-.fa-check{
+
+.fa-check {
+    font-style: italic;
     color: rgb(1, 175, 1);
     display: none;
 }
