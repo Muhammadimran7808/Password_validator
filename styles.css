@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -61,4 +62,18 @@ form button{
 form button:hover{
     background-color: #51d6cd;
     cursor: pointer;
+}
+
+.password-rules li{
+    color: red;
+}
+
+li{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.fa-check{
+    color: rgb(1, 175, 1);
+    display: none;
 }

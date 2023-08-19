@@ -1,7 +1,15 @@
-let password = document.getElementById("password")
+let password = document.getElementsByClassName("password")[0]
+let passLength = document.getElementById("passLength")
+
+
 let lower = ""
-password.addEventListener('keypress', () => {
+password.addEventListener('input', () => {
     if (password.value.length >= 8) {
-        console.log("Hi")
+        passLength.style.color = "rgb(1, 175, 1)";
+        lenFulfilled.style.display = "initial";
     }
-})
+    else {
+        passLength.style.color = "red";
+        lenFulfilled.style.display = "none";
+    }
+});

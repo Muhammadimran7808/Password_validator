@@ -14,30 +14,43 @@
         <div class="sign-up">
             <form autocomplete="on">
                 <label for="email">Email:</label>
-                <input type="email" id="email"  />
-                <label for="email">Create password:</label>
-                <input type="password" id="password" autocomplete="on"/>
+                <input type="email" id="email" />
+
+                <label for="password">Create password:</label>
+                <input type="password" id="password" class="password" autocomplete="new-password" />
+
                 <label for="Rpassword">Confirm Password:</label>
-                <input type="password" id="Rpassword" autocomplete="on"/>
+                <input type="password" id="Rpassword" class="password" autocomplete="new-password" />
+
                 <button disabled type="submit">Submit</button>
             </form>
             <div class="password-rules">
                 <h4>Password must contains the following:</h4>
                 <ul>
                     <li>
-                        <p>One or more lowercase letter</p>
+                        <i class="fa-solid fa-check" id="lowerFulfilled"></i>
+                        <!-- <i class="fa-solid fa-xmark"></i> -->
+                        <p id="lower">One or more lowercase letter</p>
                     </li>
                     <li>
-                        <p>One or more upperrcase letter</p>
+                        <i class="fa-solid fa-check" id="upperFulfilled"></i>
+                        <!-- <i class="fa-solid fa-xmark"></i> -->
+                        <p id="upper">One or more upperrcase letter</p>
                     </li>
                     <li>
-                        <p>One or more number</p>
+                        <i class="fa-solid fa-check" id="numFulfilled"></i>
+                        <!-- <i class="fa-solid fa-xmark"></i> -->
+                        <p id="number">One or more number</p>
                     </li>
                     <li>
-                        <p>Atleast one special letter</p>
+                        <i class="fa-solid fa-check" id="specFulfilled"></i>
+                        <!-- <i class="fa-solid fa-xmark"></i> -->
+                        <p id="special">Atleast one special letter</p>
                     </li>
                     <li>
-                        <p>Atleast 8 characters long</p>
+                        <i class="fa-solid fa-check" id="lenFulfilled"></i>
+                        <!-- <i class="fa-solid fa-xmark"></i> -->
+                        <p id="passLength">Atleast 8 characters long</p>
                     </li>
                 </ul>
             </div>
