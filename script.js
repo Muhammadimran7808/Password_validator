@@ -1,3 +1,4 @@
+
 let password = document.getElementsByClassName("password")[0]
 let rPassword = document.getElementsByClassName("password")[1]
 let submit = document.getElementById("submit")
@@ -6,6 +7,7 @@ let lower = document.getElementById("lower")
 let upper = document.getElementById("upper")
 let number = document.getElementById("number")
 let special = document.getElementById("special")
+let passNotMatch = document.getElementById("passNotMatch")
 
 // Regular Expression:
 const lowerCase = /[a-z]/g
@@ -14,43 +16,28 @@ const symbols = /[\W_]/
 const numbers = /[0-9]/
 
 // Funtion to show or hide password
-let showHidePassword = (data) => {
-    if (data === "1") {
-        if (password.type === "password") {
-            password.type = "text"
-        }
-        else {
-            password.type = "password"
-        }
-    }
-    else {
-        if (rPassword.type === "password") {
-            rPassword.type = "text"
-        }
-        else {
-            rPassword.type = "password"
-        }
+let togglePasswordVisibility = (inputElement) => {
+    if (inputElement.type === "password") {
+        inputElement.type = "text";
+    } else {
+        inputElement.type = "password";
     }
 }
 
 
-let showP = document.getElementsByClassName("fa-eye")
-// code that handel password show/hide icon when user click on icon.
-let a = Array.from(showP)
-a.forEach(function (elem) {
-    elem.addEventListener('click', () => {
-        data = elem.getAttribute("data")
-        if (elem.classList.contains("fa-eye")) {
-            elem.classList.add("fa-eye-slash")
-            elem.classList.remove("fa-eye")
-            showHidePassword(data);
-        }
-        else {
-            elem.classList.add("fa-eye")
-            showHidePassword(data);
-        }
-    })
-})
+
+// Event delegation for show/hide password icons
+document.addEventListener("click", (e) => {
+    const target = e.target;
+    if (target.classList.contains("fa-solid")) {
+        const data = target.getAttribute("data");
+        const passwordInput = data === "1" ? password : rPassword;
+        togglePasswordVisibility(passwordInput);
+        target.classList.toggle("fa-eye");
+        target.classList.toggle("fa-eye-slash");
+    }
+});
+
 
 let lowerF, upperF, numF, symbolF, lengthF, bothF = false;
 
@@ -118,10 +105,12 @@ let bothPassword = () => {
     if (password.value == rPassword.value) {
         rPassword.style.outline = "2px solid #accfef"
         bothF = true;
+        passNotMatch.classList.remove("active")
     }
     else {
         rPassword.style.outline = "2px solid red"
         bothF = false;
+        passNotMatch.classList.add("active")
     }
 }
 // function that checks all the conditions are fulfilled or not. If fulfilled it enable submit button.

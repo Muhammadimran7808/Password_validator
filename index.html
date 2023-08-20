@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +13,7 @@
 <body>
     <div class="container">
         <div class="sign-up">
+            <h2>SIGN UP</h2>
             <form autocomplete="on">
                 <label for="email">Email:</label>
                 <input type="email" id="email" autocomplete="username"/>
@@ -24,7 +26,7 @@
                     </div>
                 </div>
                 
-                <label for="Rpassword">Confirm Password:</label>
+                <label for="Rpassword">Confirm Password: <span id="passNotMatch">password not match*</span> </label>
                 <div class="passwordDiv">
                     <input type="password" id="Rpassword" class="password" autocomplete="new-password" />
                     <div class="passwordIcon">
