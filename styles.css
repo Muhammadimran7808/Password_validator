@@ -23,6 +23,7 @@
     gap: 1.5rem;
     background-color: #f3f3f3;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 form {
@@ -64,18 +65,18 @@ input:focus {
 }
 
 
-form button {
+form #submit {
     padding: 8px 15px;
     width: 85%;
     font-size: 1.1rem;
     margin-top: 10px;
     border-radius: 5px;
     border: 1px solid lightgray;
-    background-color: #81DFD9;
+    background-color: #81dfd991;
     color: white;
 }
 
-form button:hover {
+#submit.active {
     background-color: #51d6cd;
     cursor: pointer;
 }

@@ -124,7 +124,17 @@ let bothPassword = () => {
         bothF = false;
     }
 }
-
+// function that checks all the conditions are fulfilled or not. If fulfilled it enable submit button.
+let decesionMaker = () => {
+    if (lowerF == true && upperF == true && numF == true && symbolF == true && lengthF == true && bothF == true) {
+        submit.classList.add("active")
+        submit.disabled = false;
+    }
+    else {
+        submit.classList.remove("active")
+        submit.disabled = true;
+    }
+}
 // password event listener. The functions inside Listener will invoked when user enter something in the input feild.
 password.addEventListener('input', () => {
     lowerChecker(lowerCase);
@@ -133,18 +143,10 @@ password.addEventListener('input', () => {
     SymbolChecker(symbols);
     lengthChecker();
     bothPassword()
-    if (lowerF, upperF, numF, symbolF, lengthF, bothF == true){
-        console.log("It works")
-    }
+    decesionMaker();
 });
 
 rPassword.addEventListener('input', () => {
     bothPassword();
-    if (lowerF, upperF, numF, symbolF, lengthF, bothF == true) {
-        console.log("It works")
-    }
+    decesionMaker();
 });
-
-submit.addEventListener('click', ()=>{
-    console.log("ho")
-})
