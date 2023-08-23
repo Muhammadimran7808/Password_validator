@@ -60,7 +60,7 @@ input:focus {
     outline: 2px solid #accfef;
 }
 
-.fa-solid{
+.passwordIcon i{
     font-weight: 100;
     cursor: pointer;
     color: rgb(75, 74, 74);

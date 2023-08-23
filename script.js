@@ -12,8 +12,8 @@ let passNotMatch = document.getElementById("passNotMatch")
 // Regular Expression:
 const lowerCase = /[a-z]/g
 const upperCase = /[A-Z]/g
-const symbols = /[\W_]/
-const numbers = /[0-9]/
+const symbols = /[\W_]/g
+const numbers = /[0-9]/g
 
 // Funtion to show or hide password
 let togglePasswordVisibility = (inputElement) => {
@@ -124,6 +124,7 @@ let decesionMaker = () => {
         submit.disabled = true;
     }
 }
+
 // password event listener. The functions inside Listener will invoked when user enter something in the input feild.
 password.addEventListener('input', () => {
     lowerChecker(lowerCase);
